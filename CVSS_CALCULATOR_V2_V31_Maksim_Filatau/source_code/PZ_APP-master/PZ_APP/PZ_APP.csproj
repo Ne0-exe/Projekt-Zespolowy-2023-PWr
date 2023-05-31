@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1A67EAC-7578-4487-9F51-927A6885D369}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PZ_APP</RootNamespace>
+    <AssemblyName>PZ_APP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Models\V2.0\BaseEquationModel.cs" />
+    <Compile Include="Models\V2.0\EnvironmentalEquationModel.cs" />
+    <Compile Include="Models\V2.0\IBaseEquationRepository.cs" />
+    <Compile Include="Models\V2.0\IEnvironmentalEquationRepository.cs" />
+    <Compile Include="Models\V2.0\ITemporalEquationRepository.cs" />
+    <Compile Include="Models\V2.0\TemporalEquationModel.cs" />
+    <Compile Include="Models\V3.1\BaseEquationsModelV3.cs" />
+    <Compile Include="Models\V3.1\EnvironmentalEquationModelV3.cs" />
+    <Compile Include="Models\V3.1\IBaseEquationsRepositoryV3.cs" />
+    <Compile Include="Models\V3.1\IEnvironmentalEquationRepositoryV3.cs" />
+    <Compile Include="Models\V3.1\ITemporalEquationsRepositoryV3.cs" />
+    <Compile Include="Models\V3.1\TemporalEquationsModelV3.cs" />
+    <Compile Include="Repositories\V2.0\BaseEquationRepository.cs" />
+    <Compile Include="Repositories\V2.0\EnvironmentalEquationRepository.cs" />
+    <Compile Include="Repositories\V2.0\TemporalEquationRepository.cs" />
+    <Compile Include="Repositories\V3.1\BaseEquationsRepositoryV3.cs" />
+    <Compile Include="Repositories\V3.1\EnvironmentalEquationRepositoryV3.cs" />
+    <Compile Include="Repositories\V3.1\TemporalEquationsRepositoryV3.cs" />
+    <Compile Include="ViewModels\V3.1\BaseEquationViewModelV3.cs" />
+    <Compile Include="ViewModels\V2.0\EnvironmentalEquationViewModel.cs" />
+    <Compile Include="ViewModels\V2.0\MainMenuViewModel.cs" />
+    <Compile Include="ViewModels\V2.0\TemporalEquationViewModel.cs" />
+    <Compile Include="ViewModels\V3.1\EnvironmentalEquationViewModelV3.cs" />
+    <Compile Include="ViewModels\V3.1\MainMenuViewModelV3.cs" />
+    <Compile Include="ViewModels\V3.1\MainWindowViewModelV3.cs" />
+    <Compile Include="ViewModels\V3.1\TemporalEquationViewModelV3.cs" />
+    <Compile Include="Views\V3.1\BaseEquationsViewV3.xaml.cs">
+      <DependentUpon>BaseEquationsViewV3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\V2.0\EnvironmentalEquationView.xaml.cs">
+      <DependentUpon>EnvironmentalEquationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\V2.0\MainMenuView.xaml.cs">
+      <DependentUpon>MainMenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\V3.1\EnvironmentalEquationV3View.xaml.cs">
+      <DependentUpon>EnvironmentalEquationV3View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\V3.1\MainMenuViewV3.xaml.cs">
+      <DependentUpon>MainMenuViewV3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\V3.1\MainWindowV31.xaml.cs">
+      <DependentUpon>MainWindowV31.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartScreen.xaml.cs">
+      <DependentUpon>StartScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\V2.0\TemporalEquationView.xaml.cs">
+      <DependentUpon>TemporalEquationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\V3.1\TemporalEquationV3View.xaml.cs">
+      <DependentUpon>TemporalEquationV3View.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Styles\ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ComboBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\TextAndBorderStylesCalculation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\V3.1\BaseEquationsViewV3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\V2.0\BaseEquationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\V2.0\EnvironmentalEquationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\V2.0\MainMenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\V2.0\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModels\V2.0\BaseEquationViewModel.cs" />
+    <Compile Include="ViewModels\V2.0\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\ViewModelCommand.cs" />
+    <Compile Include="Views\V2.0\BaseEquationView.xaml.cs">
+      <DependentUpon>BaseEquationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\V2.0\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\V3.1\EnvironmentalEquationV3View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\V3.1\MainMenuViewV3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\V3.1\MainWindowV31.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StartScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\V2.0\TemporalEquationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\V3.1\TemporalEquationV3View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BG-MW.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MainMenuTable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\v3Table.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="PZ_APP.Views.V3._1.MainMenuViewV3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PZ_APP.Views.V3._1"
+             mc:Ignorable="d" 
+            d:DesignHeight="760" d:DesignWidth="1170">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="635"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Style="{StaticResource BorderTextEqName}">
+            <StackPanel Margin="3">
+                <TextBlock FontFamily="Montserrat"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="12"
+                           Foreground="#1E0508"
+                           Text="FAQ"/>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="1" Style="{StaticResource BorderTextEqName}">
+            <StackPanel Margin="10,20,10,20">
+                <TextBlock Text="   The Common Vulnerability Scoring System (CVSS) is an open framework for communicating the characteristics and severity of software vulnerabilities. CVSS consists of three metric groups: Base, Temporal, and Environmental. The Base group represents the intrinsic qualities of a vulnerability that are constant over time and across user environments, the Temporal group reflects the characteristics of a vulnerability that change over time, and the Environmental group represents the characteristics of a vulnerability that are unique to a user's environment. The Base metrics produce a score ranging from 0 to 10, which can then be modified by scoring the Temporal and Environmental metrics. A CVSS score is also represented as a vector string, a compressed textual representation of the values used to derive the score. This document provides the official specification for CVSS version 3.1."
+                           TextWrapping="Wrap"
+                           VerticalAlignment="Stretch"
+                           HorizontalAlignment="Stretch"
+                           FontSize="16"
+                           FontFamily="Montserrat"
+                           Foreground="#420C0C"/>
+                <TextBlock Text ="  This application calculates the CVCC scoring based on the corporation's known parameters, given that the flag values ​​are known. The application allows you to calculate Base Equation, Temporal Equation, Environmental Equation in standart V3.1.  The Base Score reflects the severity of a vulnerability according to its intrinsic characteristics which are constant over time and assumes the reasonable worst case impact across different deployed environments. The Temporal Metrics adjust the Base severity of a vulnerability based on factors that change over time, such as the availability of exploit code. The Environmental Metrics adjust the Base and Temporal severities to a specific computing environment. They consider factors such as the presence of mitigations in that environment."
+                           Margin="0,10,0,0"
+                           TextWrapping="Wrap"
+                           VerticalAlignment="Stretch"
+                           HorizontalAlignment="Stretch"
+                           FontSize="16"
+                           FontFamily="Montserrat"
+                           Foreground="#420C0C"
+                    />
+                <TextBlock Text="   CVSS is composed of three metric groups: Base, Temporal, and Environmental, each consisting of a set of metrics, as shown in Figure"
+                           Margin="0,10,0,0"
+                           TextWrapping="Wrap"
+                           VerticalAlignment="Stretch"
+                           HorizontalAlignment="Stretch"
+                           FontSize="16"
+                           FontFamily="Montserrat"
+                           Foreground="#420C0C"/>
+                <Image Margin="50,10,50,10"
+                       Height="200"
+                       Source="/Images/v3Table.png"/>
+
+                <TextBlock Text="   The benefits of CVSS include the provision of a standardized vendor and platform agnostic vulnerability scoring methodology. It is an open framework, providing transparency to the individual characteristics and methodology used to derive a score."
+                           Margin="0,10,0,0"
+                           TextWrapping="Wrap"
+                           VerticalAlignment="Stretch"
+                           HorizontalAlignment="Stretch"
+                           FontSize="16"
+                           FontFamily="Montserrat"
+                           Foreground="#420C0C"
+                           />
+                <TextBlock Text="Source: first.org, Common Vulnerability Scoring System v3.1: Specification Document"
+                           HorizontalAlignment="Right"
+                           Margin="0,10,0,0"
+                           TextWrapping="Wrap"
+                           VerticalAlignment="Stretch"
+                           FontSize="14"
+                           FontFamily="Montserrat"
+                           FontWeight="Bold"
+                           Foreground="#1E0508"/>
+
+                <TextBlock 
+                           HorizontalAlignment="Right"
+                           TextWrapping="Wrap"
+                           VerticalAlignment="Stretch"
+                           FontSize="14"
+                           FontFamily="Montserrat"
+                           Foreground="#1E0508">
+                    <Hyperlink NavigateUri="https://www.first.org/cvss/v3.1/specification-document"
+                               RequestNavigate="Hyperlink_RequestNavigate"
+                               FontWeight="Bold">
+                        Source Link
+                    </Hyperlink>
+
+                </TextBlock>
+                <TextBlock Text="Application Author: Maksim Filatau"
+                           Margin="0,3,0,0"
+                           HorizontalAlignment="Right"
+                           TextWrapping="Wrap"
+                           VerticalAlignment="Stretch"
+                           FontSize="14"
+                           FontFamily="Montserrat"
+                           FontWeight="Bold"
+                           Foreground="#1E0508"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

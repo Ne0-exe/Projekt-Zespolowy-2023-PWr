@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="PZ_APP.exe" version="1.0.0.0" publicKeyToken="bbe46d48df8f1a4e" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="PZ_APP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="PZ_APP.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Параметры манифеста UAC
+          Если нужно изменить уровень контроля учетных записей Windows, замените 
+          узел requestedExecutionLevel одним из следующих значений.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+        Если нужно использовать виртуализацию файлов и реестра для обратной
+             совместимости, удалите узел requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FontAwesome.Sharp.dll" size="761344">
+      <assemblyIdentity name="FontAwesome.Sharp" version="6.3.0.0" publicKeyToken="D16D1E4E568EC10F" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>oKxyIsbHY4m6JoljXtaeHil9GE8R71yFlYg2PGHqXts=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PZ_APP.exe" size="620504">
+      <assemblyIdentity name="PZ_APP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>IIPOGF9LK+ONPLApE6HXiQLZb/VZtNTmwowmBr2xMlo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="PZ_APP.exe.config" size="193">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>gpGFXZ294WDCyif0MKdKB4PCX817W7jB5/kg34APFpI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=WIN81_X64\А д м и н" issuerKeyHash="f907338d49b7fde79b6e1cecfdf38e92be8c8fc3" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>cWcLa9bSNS2PsHOqAfLtf90lKhkLsfqrw0gSlarBIKs=</DigestValue></Reference></SignedInfo><SignatureValue>Q9IlDkOQDOSkogfgGOZDrSNAL7mpDg8dUqG7QokUeT/FjlhO9vggpJ5Q7keq8Vvq7TU4dAWJG23dFSZA0gGq6q+b9tDkv8LsCK7u9CuEnksjKv7mJFn255Ug2VYR29mlL4EklMxbRcHZ06Q24XrASDUQdPV65kb3YzZKLBbnL+o=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>5rB0JuP6nT8q2HMmtD0QxQR0smq3TiNUdz55O3RYbFGpNOwYsfX/8PvBzvaL0iVRIzNkvBw1w1GAmFRimmKZQR8ohIrJL7rnt0O6kl0HyIjsXR+DTCCDNVoiG+E+221hPGAUZdR5aUwgoc2G9frn7S/eVFEt4S8gSWIDmy9eLWU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="ab20c1aa951248c3abfab10b192a25dd7fedf201aa73b08f2d35d2d66b0b6771" Description="" Url=""><as:assemblyIdentity name="PZ_APP.exe" version="1.0.0.0" publicKeyToken="bbe46d48df8f1a4e" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=WIN81_X64\А д м и н</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>94v7IHq4W+Tl6K5LdtebOMigsBIutVcMtLUENPRfPd4=</DigestValue></Reference></SignedInfo><SignatureValue>WuCele9EIYTX+myYFOwYiKT1vM6OXclU06HhEIUG8RockjUhGMi4BbByt2wmxt61Y3XQa23nlj/KeBd7sKvDfgqDqvQdW2rzZzoaQXzgAHqQc24c9TtdaDADjUZHv9CQyqWydli7+89nF2IZq9O0nGw5sBWdzfhc+4jAgDtHMZk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>5rB0JuP6nT8q2HMmtD0QxQR0smq3TiNUdz55O3RYbFGpNOwYsfX/8PvBzvaL0iVRIzNkvBw1w1GAmFRimmKZQR8ohIrJL7rnt0O6kl0HyIjsXR+DTCCDNVoiG+E+221hPGAUZdR5aUwgoc2G9frn7S/eVFEt4S8gSWIDmy9eLWU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB5TCCAU6gAwIBAgIQGzhmE9/vXoFKBDXLv1MCnDANBgkqhkiG9w0BAQsFADAxMS8wLQYDVQQDHiYAVwBJAE4AOAAxAF8AWAA2ADQAXAQQACAENAAgBDwAIAQ4ACAEPTAeFw0yMzA1MzAxNjIyNDVaFw0yNDA1MjkyMjIyNDVaMDExLzAtBgNVBAMeJgBXAEkATgA4ADEAXwBYADYANABcBBAAIAQ0ACAEPAAgBDgAIAQ9MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDmsHQm4/qdPyrYcya0PRDFBHSyardOI1R3Pnk7dFhsUak07Bix9f/w+8HO9ovSJVEjM2S8HDXDUYCYVGKaYplBHyiEiskvuue3Q7qSXQfIiOxdH4NMIIM1WiIb4T7bbWE8YBRl1HlpTCChzYb1+uftL95UUS3hLyBJYgObL14tZQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBALFTvVj7nb4wcWQ5drY21tJ1hB7s+B7PTy+Hwy6QEPit14oc+ZW78XoVnEU7EZ5sLbQ/FPx+5Vs8jCujBAo/RPxBP8C3w9+Zvp59f4h8RrFONies1wT2k3ATKnsYemljYrUCLKok3ED4ZOlt+tGBw6kTVCIZfVP1AYZIAsHwi2Xb</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
